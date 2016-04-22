@@ -55,6 +55,8 @@ noremap <C-j> :bn<CR>
 noremap <C-k> :bp<CR>
 
 " Theme
+highlight WarningMsg ctermbg=3
+
 let g:solarized_base16 = 1
 let g:airline_theme = 'custom_solarized'
 let g:airline_solarized_bg = 'dark'
@@ -64,7 +66,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
 let g:neomake_airline = 1
 let g:neomake_error_sign = {'text':'>>','texthl':'ErrorMsg'}
-let g:neomake_warning_sign = {'text':'>>','texthl':'ErrorMsg'}
+let g:neomake_warning_sign = {'text':'??','texthl':'WarningMsg'}
 let g:neomake_open_list = 2
 let g:neomake_list_height = 5
 
