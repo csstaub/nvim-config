@@ -1,6 +1,6 @@
 " Common settings
 set nocompatible
-set relativenumber 
+set relativenumber
 set ruler
 set hidden
 set mouse=a
@@ -62,6 +62,11 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
+let g:neomake_airline = 1
+let g:neomake_error_sign = {'text':'>>','texthl':'ErrorMsg'}
+let g:neomake_warning_sign = {'text':'>>','texthl':'ErrorMsg'}
+let g:neomake_open_list = 2
+let g:neomake_list_height = 5
 
 colorscheme solarized
 set background=dark
