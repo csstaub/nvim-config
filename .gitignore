@@ -1,0 +1,6 @@
+undodir
+backup
+plugins/temp
+plugins/merged
+plugins/.dein
+plugins/rollbacks
