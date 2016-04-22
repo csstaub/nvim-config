@@ -1,9 +1,3 @@
-" Syntax highlighing
-syntax on
-syntax enable
-
-filetype plugin indent on
-
 " Common settings
 set nocompatible
 set relativenumber 
@@ -47,6 +41,8 @@ call dein#begin(expand('~/.config/nvim/plugins'))
 call dein#add('Shougo/dein.vim')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
+call dein#add('benekastah/neomake')
+call dein#add('fatih/vim-go')
 call dein#end()
 
 " Install plugins on startup
@@ -65,6 +61,12 @@ let g:airline_solarized_bg = 'dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
 
 colorscheme solarized
 set background=dark
+
+" Syntax highlighing
+syntax enable
+filetype plugin indent on
+autocmd! BufWritePost * Neomake

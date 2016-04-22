@@ -49,7 +49,7 @@ function! airline#themes#custom_solarized#refresh()
     let s:N3 = [s:base1, s:base2, '']
   endif
   let s:NF = [s:orange, s:N3[1], '']
-  let s:NW = [s:base3, s:base3, '']
+  let s:NW = [s:black, s:base2, '']
   if s:background == 'dark'
     let s:NM = [s:base1, s:N3[1], '']
     let s:NMi = [s:base2, s:N3[1], '']
