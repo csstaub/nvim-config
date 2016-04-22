@@ -13,3 +13,9 @@
 [submodule "plugins/repos/github.com/vim-airline/vim-airline-themes"]
 	path = plugins/repos/github.com/vim-airline/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "plugins/repos/github.com/Shougo/deoplete.vim"]
+	path = plugins/repos/github.com/Shougo/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "plugins/repos/github.com/zchee/deoplete-go"]
+	path = plugins/repos/github.com/zchee/deoplete-go
+	url = https://github.com/zchee/deoplete-go.git

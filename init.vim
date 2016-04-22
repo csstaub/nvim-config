@@ -43,6 +43,8 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('benekastah/neomake')
 call dein#add('fatih/vim-go')
+call dein#add('Shougo/deoplete.nvim')
+call dein#add('zchee/deoplete-go', {'build': 'make'})
 call dein#end()
 
 " Install plugins on startup
@@ -53,6 +55,12 @@ endif
 " Key bindings
 noremap <C-j> :bn<CR>
 noremap <C-k> :bp<CR>
+
+" Autocompletion
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_start_length = 3
+let g:deoplete#max_list = 7
+autocmd! CompleteDone * pclose
 
 " Theme
 highlight WarningMsg ctermbg=3
