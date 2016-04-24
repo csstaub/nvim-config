@@ -1,10 +1,7 @@
 " Common settings
-set nocompatible
 set relativenumber
 set ruler
 set hidden
-set mouse=a
-set t_Co=256
 set timeoutlen=50
 
 " Configure undo
