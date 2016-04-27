@@ -40,6 +40,8 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('benekastah/neomake')
 call dein#add('fatih/vim-go')
+call dein#add('Shougo/deoplete.nvim')
+call dein#add('zchee/deoplete-go', {'build': 'make'})
 call dein#end()
 
 " Install plugins on startup
@@ -51,7 +53,15 @@ endif
 noremap <C-j> :bn<CR>
 noremap <C-k> :bp<CR>
 
+" Autocompletion
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_start_length = 3
+let g:deoplete#max_list = 7
+autocmd! CompleteDone * pclose
+
 " Theme
+highlight WarningMsg ctermbg=3
+
 let g:solarized_base16 = 1
 let g:airline_theme = 'custom_solarized'
 let g:airline_solarized_bg = 'dark'
@@ -61,7 +71,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
 let g:neomake_airline = 1
 let g:neomake_error_sign = {'text':'>>','texthl':'ErrorMsg'}
-let g:neomake_warning_sign = {'text':'>>','texthl':'ErrorMsg'}
+let g:neomake_warning_sign = {'text':'??','texthl':'WarningMsg'}
 let g:neomake_open_list = 2
 let g:neomake_list_height = 5
 
