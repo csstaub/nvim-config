@@ -19,3 +19,6 @@
 [submodule "plugins/repos/github.com/zchee/deoplete-go"]
 	path = plugins/repos/github.com/zchee/deoplete-go
 	url = https://github.com/zchee/deoplete-go.git
+[submodule "plugins/repos/github.com/chriskempson/base16-vim"]
+	path = plugins/repos/github.com/chriskempson/base16-vim
+	url = https://github.com/chriskempson/base16-vim

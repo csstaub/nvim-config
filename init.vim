@@ -3,6 +3,7 @@ set relativenumber
 set ruler
 set hidden
 set timeoutlen=50
+set showcmd
 
 " Configure undo
 set undodir=~/.config/nvim/undodir
@@ -29,6 +30,7 @@ set fileencoding=utf-8
 
 " Change cursor shape between insert and normal mode
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Dein plugin manager
 set runtimepath^=~/.config/nvim
@@ -38,6 +40,7 @@ call dein#begin(expand('~/.config/nvim/plugins'))
 call dein#add('Shougo/dein.vim')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
+call dein#add('chriskempson/base16-vim')
 call dein#add('benekastah/neomake')
 call dein#add('fatih/vim-go')
 call dein#add('Shougo/deoplete.nvim')
@@ -52,6 +55,8 @@ endif
 " Key bindings
 noremap <C-j> :bn<CR>
 noremap <C-k> :bp<CR>
+tnoremap <C-j> <C-\><C-n>:bn<CR>
+tnoremap <C-k> <C-\><C-n>:bp<CR>
 
 " Autocompletion
 let g:deoplete#enable_at_startup = 1
@@ -62,9 +67,7 @@ autocmd! CompleteDone * pclose
 " Theme
 highlight WarningMsg ctermbg=3
 
-let g:solarized_base16 = 1
-let g:airline_theme = 'custom_solarized'
-let g:airline_solarized_bg = 'dark'
+let g:airline_theme = 'base16_tomorrow'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
@@ -75,8 +78,8 @@ let g:neomake_warning_sign = {'text':'??','texthl':'WarningMsg'}
 let g:neomake_open_list = 2
 let g:neomake_list_height = 5
 
-colorscheme solarized
 set background=dark
+colorscheme base16-tomorrow
 
 " Syntax highlighing
 syntax enable
