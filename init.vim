@@ -58,10 +58,22 @@ noremap <C-k> :bp<CR>
 tnoremap <C-j> <C-\><C-n>:bn<CR>
 tnoremap <C-k> <C-\><C-n>:bp<CR>
 
+cabbrev GI GoImport
+cabbrev GA GoAlternate
+cabbrev GT GoTest
+cabbrev GR GoRun
+cabbrev GB GoBuild
+
+" Hide quickfix from buffer list so bn/bp doesn't cycle into it
+augroup QFix
+  autocmd!
+  autocmd FileType qf setlocal nobuflisted
+augroup END
+
 " Autocompletion
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_start_length = 3
-let g:deoplete#max_list = 7
+let g:deoplete#max_list = 10
 autocmd! CompleteDone * pclose
 
 " Theme
@@ -77,6 +89,7 @@ let g:neomake_error_sign = {'text':'>>','texthl':'ErrorMsg'}
 let g:neomake_warning_sign = {'text':'??','texthl':'WarningMsg'}
 let g:neomake_open_list = 2
 let g:neomake_list_height = 5
+let g:go_fmt_command = "goimports"
 
 set background=dark
 colorscheme base16-tomorrow
