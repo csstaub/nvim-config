@@ -30,7 +30,8 @@ set fileencoding=utf-8
 
 " Change cursor shape between insert and normal mode
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " nvim <0.1.5
+set termguicolors " nvim >=0.1.5
 
 " Dein plugin manager
 set runtimepath^=~/.config/nvim
