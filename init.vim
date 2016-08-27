@@ -25,6 +25,7 @@ set autoindent
 set smartindent
 
 " I like unicode
+set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 
@@ -92,8 +93,8 @@ let g:neomake_open_list = 2
 let g:neomake_list_height = 5
 let g:go_fmt_command = "goimports"
 
-set background=dark
-colorscheme base16-tomorrow
+let base16colorspace=256
+colorscheme base16-tomorrow-night
 
 " Syntax highlighing
 syntax enable
