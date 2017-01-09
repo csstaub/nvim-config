@@ -44,6 +44,7 @@ call dein#add('Shougo/dein.vim')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('chriskempson/base16-vim')
+call dein#add('mhartington/oceanic-next')
 call dein#add('benekastah/neomake')
 call dein#add('fatih/vim-go')
 call dein#add('Shougo/deoplete.nvim')
@@ -93,6 +94,26 @@ let g:neomake_warning_sign = {'text':'??','texthl':'WarningMsg'}
 let g:neomake_open_list = 2
 let g:neomake_list_height = 5
 let g:go_fmt_command = "goimports"
+
+" Base16 tomorrow night terminal colors
+let g:terminal_color_0 = "#1d1f21"
+let g:terminal_color_1 = "#cc6666"
+let g:terminal_color_2 = "#b5bd68"
+let g:terminal_color_3 = "#f0c674"
+let g:terminal_color_4 = "#81a2be"
+let g:terminal_color_5 = "#b294bb"
+let g:terminal_color_6 = "#8abeb7"
+let g:terminal_color_7 = "#c5c8c6"
+let g:terminal_color_8 = "#969896"
+let g:terminal_color_9 = "#cc6666"
+let g:terminal_color_10 = "#b5bd68"
+let g:terminal_color_11 = "#f0c674"
+let g:terminal_color_12 = "#81a2be"
+let g:terminal_color_13 = "#b294bb"
+let g:terminal_color_14 = "#8abeb7"
+let g:terminal_color_15 = "#ffffff"
+let g:terminal_color_background = "#1d1f21"
+let g:terminal_color_foreground = "#c5c8c6"
 
 let base16colorspace=256
 colorscheme base16-tomorrow-night
