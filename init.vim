@@ -14,6 +14,7 @@ set undoreload=1000
 " Configure backups
 set backupdir=~/.config/nvim/backup
 set directory=~/.config/nvim/backup
+set backupskip=/tmp/*,/private/tmp/*
 
 " Configure tab behavior
 set tabstop=2
