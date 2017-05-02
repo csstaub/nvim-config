@@ -51,6 +51,10 @@ call dein#add('Shougo/deoplete.nvim')
 call dein#add('zchee/deoplete-go', {'build': 'make'})
 call dein#end()
 
+" fzf (via brew)
+set rtp+=/usr/local/opt/fzf
+let g:fzf_layout = { 'down': '~20%' }
+
 " Install plugins on startup
 if dein#check_install()
   call dein#install()
@@ -59,8 +63,10 @@ endif
 " Key bindings
 noremap <C-j> :bn<CR>
 noremap <C-k> :bp<CR>
+noremap <C-f> :FZF<CR>
 tnoremap <C-j> <C-\><C-n>:bn<CR>
 tnoremap <C-k> <C-\><C-n>:bp<CR>
+tnoremap <C-f> <C-\><C-n>:FZF<CR>
 
 cabbrev GI GoImport
 cabbrev GA GoAlternate
@@ -81,7 +87,7 @@ let g:deoplete#max_list = 10
 autocmd! CompleteDone * pclose
 
 " Theme
-highlight WarningMsg ctermbg=3
+"highlight WarningMsg ctermbg=3
 
 let g:airline_theme = 'base16_tomorrow'
 let g:airline_powerline_fonts = 1
@@ -89,8 +95,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
 let g:neomake_airline = 1
-let g:neomake_error_sign = {'text':'>>','texthl':'ErrorMsg'}
-let g:neomake_warning_sign = {'text':'??','texthl':'WarningMsg'}
+let g:neomake_javascript_enabled_makers = ['eslint']
+"let g:neomake_javascript_eslint_maker = {'args': ['--no-color', '--format'], 'errorformat': '%f: line %l\, col %c\, %m'}
+let g:neomake_error_sign = {'text':'!','texthl':'NeomakeErrorSign'}
+let g:neomake_warning_sign = {'text':'>','texthl':'NeomakeWarningSign'}
+let g:neomake_info_sign = {'text':'i','texthl':'NeomakeInfoSign'}
 let g:neomake_open_list = 2
 let g:neomake_list_height = 5
 let g:go_fmt_command = "goimports"
