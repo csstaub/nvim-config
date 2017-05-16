@@ -31,25 +31,26 @@ set termencoding=utf-8
 set fileencoding=utf-8
 
 " Change cursor shape between insert and normal mode
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " nvim <0.1.5
-set termguicolors " nvim >=0.1.5
+set termguicolors
 
 " Dein plugin manager
 set runtimepath^=~/.config/nvim
 set runtimepath^=~/.config/nvim/plugins/repos/github.com/Shougo/dein.vim
 
-call dein#begin(expand('~/.config/nvim/plugins'))
-call dein#add('Shougo/dein.vim')
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
-call dein#add('chriskempson/base16-vim')
-call dein#add('mhartington/oceanic-next')
-call dein#add('benekastah/neomake')
-call dein#add('fatih/vim-go')
-call dein#add('Shougo/deoplete.nvim')
-call dein#add('zchee/deoplete-go', {'build': 'make'})
-call dein#end()
+if dein#load_state(expand('~/.config/nvim/plugins'))
+  call dein#begin(expand('~/.config/nvim/plugins'))
+  call dein#add('Shougo/dein.vim')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('chriskempson/base16-vim')
+  call dein#add('mhartington/oceanic-next')
+  call dein#add('benekastah/neomake')
+  call dein#add('fatih/vim-go')
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('zchee/deoplete-go', {'build': 'make'})
+  call dein#end()
+  call dein#save_state()
+endif
 
 " fzf (via brew)
 set rtp+=/usr/local/opt/fzf
