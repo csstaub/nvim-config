@@ -4,6 +4,7 @@ set ruler
 set hidden
 set timeoutlen=50
 set showcmd
+set mouse=a
 
 " Configure undo
 set undodir=~/.config/nvim/undodir
