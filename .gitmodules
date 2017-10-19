@@ -25,3 +25,9 @@
 [submodule "plugins/repos/github.com/mhartington/oceanic-next"]
 	path = plugins/repos/github.com/mhartington/oceanic-next
 	url = https://github.com/mhartington/oceanic-next.git
+[submodule "plugins/repos/github.com/jlesuembre/base16-neovim"]
+	path = plugins/repos/github.com/jlesuembre/base16-neovim
+	url = https://github.com/jlesquembre/base16-neovim
+[submodule "plugins/repos/github.com/jlesquembre/base16-neovim"]
+	path = plugins/repos/github.com/jlesquembre/base16-neovim
+	url = https://github.com/jlesquembre/base16-neovim.git
