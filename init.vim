@@ -69,6 +69,21 @@ tnoremap <C-j> <C-\><C-n>:bn<CR>
 tnoremap <C-k> <C-\><C-n>:bp<CR>
 tnoremap <C-f> <C-\><C-n>:FZF<CR>
 
+" Window navigation
+" Option + h/j/kl
+tnoremap ˙ <C-\><C-N><C-w>h
+tnoremap ∆ <C-\><C-N><C-w>j
+tnoremap ˚ <C-\><C-N><C-w>k
+tnoremap ¬ <C-\><C-N><C-w>l
+inoremap ˙ <C-\><C-N><C-w>h
+inoremap ∆ <C-\><C-N><C-w>j
+inoremap ˚ <C-\><C-N><C-w>k
+inoremap ¬ <C-\><C-N><C-w>l
+nnoremap ˙ <C-w>h
+nnoremap ∆ <C-w>j
+nnoremap ˚ <C-w>k
+nnoremap ¬ <C-w>l
+
 cabbrev GI GoImport
 cabbrev GA GoAlternate
 cabbrev GT GoTest
