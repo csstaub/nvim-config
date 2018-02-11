@@ -5,3 +5,6 @@ plugins/temp
 plugins/merged
 plugins/.dein
 plugins/rollbacks
+plugins/.cache
+plugins/cache*
+plugins/state*

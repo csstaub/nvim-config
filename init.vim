@@ -4,6 +4,7 @@ set ruler
 set hidden
 set timeoutlen=50
 set showcmd
+set mouse=a
 
 " Configure undo
 set undodir=~/.config/nvim/undodir
@@ -31,23 +32,25 @@ set termencoding=utf-8
 set fileencoding=utf-8
 
 " Change cursor shape between insert and normal mode
-set termguicolors 
+set termguicolors
 
 " Dein plugin manager
 set runtimepath^=~/.config/nvim
 set runtimepath^=~/.config/nvim/plugins/repos/github.com/Shougo/dein.vim
 
-call dein#begin(expand('~/.config/nvim/plugins'))
-call dein#add('Shougo/dein.vim')
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
-call dein#add('chriskempson/base16-vim')
-call dein#add('mhartington/oceanic-next')
-call dein#add('benekastah/neomake')
-call dein#add('fatih/vim-go')
-call dein#add('Shougo/deoplete.nvim')
-call dein#add('zchee/deoplete-go', {'build': 'make'})
-call dein#end()
+if dein#load_state(expand('~/.config/nvim/plugins'))
+  call dein#begin(expand('~/.config/nvim/plugins'))
+  call dein#add('Shougo/dein.vim')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('jlesquembre/base16-neovim')
+  call dein#add('benekastah/neomake')
+  call dein#add('fatih/vim-go')
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('zchee/deoplete-go', {'build': 'make'})
+  call dein#end()
+  call dein#save_state()
+endif
 
 " fzf (via brew)
 set rtp+=/usr/local/opt/fzf
@@ -65,6 +68,21 @@ noremap <C-f> :FZF<CR>
 tnoremap <C-j> <C-\><C-n>:bn<CR>
 tnoremap <C-k> <C-\><C-n>:bp<CR>
 tnoremap <C-f> <C-\><C-n>:FZF<CR>
+
+" Window navigation
+" Option + h/j/kl
+tnoremap ˙ <C-\><C-N><C-w>h
+tnoremap ∆ <C-\><C-N><C-w>j
+tnoremap ˚ <C-\><C-N><C-w>k
+tnoremap ¬ <C-\><C-N><C-w>l
+inoremap ˙ <C-\><C-N><C-w>h
+inoremap ∆ <C-\><C-N><C-w>j
+inoremap ˚ <C-\><C-N><C-w>k
+inoremap ¬ <C-\><C-N><C-w>l
+nnoremap ˙ <C-w>h
+nnoremap ∆ <C-w>j
+nnoremap ˚ <C-w>k
+nnoremap ¬ <C-w>l
 
 cabbrev GI GoImport
 cabbrev GA GoAlternate
