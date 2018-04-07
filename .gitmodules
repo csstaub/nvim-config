@@ -1,6 +1,6 @@
 [submodule "plugins/repos/github.com/Shougo/dein.vim"]
 	path = plugins/repos/github.com/Shougo/dein.vim
-	url = git@github.com:Shougo/dein.vim.git
+	url = https://github.com/Shougo/dein.vim.git
 [submodule "plugins/repos/github.com/benekastah/neomake"]
 	path = plugins/repos/github.com/benekastah/neomake
 	url = https://github.com/benekastah/neomake.git
