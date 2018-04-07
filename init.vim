@@ -5,6 +5,8 @@ set hidden
 set timeoutlen=50
 set showcmd
 set mouse=a
+set title
+set tags=.git/tags,tags
 
 " Configure undo
 set undodir=~/.config/nvim/undodir
@@ -48,6 +50,7 @@ if dein#load_state(expand('~/.config/nvim/plugins'))
   call dein#add('fatih/vim-go')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('zchee/deoplete-go', {'build': 'make'})
+  call dein#add('fishbullet/deoplete-ruby')
   call dein#end()
   call dein#save_state()
 endif
@@ -99,7 +102,7 @@ augroup END
 " Autocompletion
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_start_length = 3
-let g:deoplete#max_list = 10
+let g:deoplete#max_list = 20
 autocmd! CompleteDone * pclose
 
 " Theme
