@@ -37,11 +37,11 @@ set fileencoding=utf-8
 set termguicolors
 
 " Dein plugin manager
-set runtimepath+=~/.config/nvim
-set runtimepath+=~/.config/nvim/plugins/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state(expand('~/.config/nvim/plugins'))
-  call dein#begin(expand('~/.config/nvim/plugins'))
+if dein#load_state(expand('~/.config/nvim/dein'))
+  call dein#begin(expand('~/.config/nvim/dein'))
+  call dein#add(expand('~/.config/nvim/dein'))
   call dein#add('Shougo/dein.vim')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')

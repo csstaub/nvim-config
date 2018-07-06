@@ -1,33 +1,33 @@
 [submodule "plugins/repos/github.com/Shougo/dein.vim"]
-	path = plugins/repos/github.com/Shougo/dein.vim
+	path = dein/repos/github.com/Shougo/dein.vim
 	url = https://github.com/Shougo/dein.vim.git
 [submodule "plugins/repos/github.com/benekastah/neomake"]
-	path = plugins/repos/github.com/benekastah/neomake
+	path = dein/repos/github.com/benekastah/neomake
 	url = https://github.com/benekastah/neomake.git
 [submodule "plugins/repos/github.com/fatih/vim-go"]
-	path = plugins/repos/github.com/fatih/vim-go
+	path = dein/repos/github.com/fatih/vim-go
 	url = https://github.com/fatih/vim-go.git
 [submodule "plugins/repos/github.com/vim-airline/vim-airline"]
-	path = plugins/repos/github.com/vim-airline/vim-airline
+	path = dein/repos/github.com/vim-airline/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "plugins/repos/github.com/vim-airline/vim-airline-themes"]
-	path = plugins/repos/github.com/vim-airline/vim-airline-themes
+	path = dein/repos/github.com/vim-airline/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "plugins/repos/github.com/Shougo/deoplete.vim"]
-	path = plugins/repos/github.com/Shougo/deoplete.nvim
+	path = dein/repos/github.com/Shougo/deoplete.nvim
 	url = https://github.com/Shougo/deoplete.nvim.git
 [submodule "plugins/repos/github.com/zchee/deoplete-go"]
-	path = plugins/repos/github.com/zchee/deoplete-go
+	path = dein/repos/github.com/zchee/deoplete-go
 	url = https://github.com/zchee/deoplete-go.git
 [submodule "plugins/repos/github.com/chriskempson/base16-vim"]
-	path = plugins/repos/github.com/chriskempson/base16-vim
+	path = dein/repos/github.com/chriskempson/base16-vim
 	url = https://github.com/chriskempson/base16-vim
 [submodule "plugins/repos/github.com/jlesuembre/base16-neovim"]
 	path = plugins/repos/github.com/jlesuembre/base16-neovim
 	url = https://github.com/jlesquembre/base16-neovim
 [submodule "plugins/repos/github.com/jlesquembre/base16-neovim"]
-	path = plugins/repos/github.com/jlesquembre/base16-neovim
+	path = dein/repos/github.com/jlesquembre/base16-neovim
 	url = https://github.com/jlesquembre/base16-neovim.git
 [submodule "plugins/repos/github.com/fishbullet/deoplete-ruby"]
-	path = plugins/repos/github.com/fishbullet/deoplete-ruby
+	path = dein/repos/github.com/fishbullet/deoplete-ruby
 	url = https://github.com/fishbullet/deoplete-ruby.git
