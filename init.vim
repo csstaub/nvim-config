@@ -1,4 +1,5 @@
 " Common settings
+set ignorecase
 set relativenumber
 set ruler
 set hidden
@@ -36,6 +37,10 @@ set fileencoding=utf-8
 " Change cursor shape between insert and normal mode
 set termguicolors
 
+" Python setup
+let g:loaded_python_provider = 0
+let g:python3_host_prog = '/Users/cstaub/.pyenv/versions/neovim3/bin/python'
+
 " Dein plugin manager
 set runtimepath+=~/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 
@@ -50,7 +55,6 @@ if dein#load_state(expand('~/.config/nvim/dein'))
   call dein#add('fatih/vim-go')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('zchee/deoplete-go', {'build': 'make'})
-  call dein#add('fishbullet/deoplete-ruby')
   call dein#end()
   call dein#save_state()
 endif
@@ -101,8 +105,6 @@ augroup END
 
 " Autocompletion
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_start_length = 3
-let g:deoplete#max_list = 20
 autocmd! CompleteDone * pclose
 
 " Theme
@@ -143,6 +145,7 @@ let g:terminal_color_15 = "#ffffff"
 let g:terminal_color_background = "#1d1f21"
 let g:terminal_color_foreground = "#c5c8c6"
 
+let g:netrw_fastbrowse = 0
 let base16colorspace=256
 colorscheme base16-tomorrow-night
 
